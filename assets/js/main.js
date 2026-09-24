@@ -81,11 +81,16 @@
   var menuOpen = false;
   var sdView = window.CSS && CSS.supports('animation-timeline: view()');
   var pxs = [].slice.call(document.querySelectorAll('.px'));
+  // Barra CTA mobile: compare dopo le CTA dell'hero, sparisce sopra il footer
+  var bb = document.getElementById('bb');
+  var heroBtns = document.querySelector('.hero .btns');
+  var ftr = document.querySelector('.ftr');
   var raf = 0;
   var frame = function () {
     raf = 0;
     var y = scrollY;
     if (!menuOpen) hdr.dataset.s = y < 8 ? 'top' : 'solid';
+    bb.dataset.show = String(heroBtns.getBoundingClientRect().bottom < 0 && ftr.getBoundingClientRect().top > innerHeight);
     if (!sdView && !reduced) {
       var wide = innerWidth >= 1440, vh = innerHeight;
       pxs.forEach(function (el) {
