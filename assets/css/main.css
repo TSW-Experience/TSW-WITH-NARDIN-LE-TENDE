@@ -76,10 +76,6 @@ svg{display:block}
 @supports(animation-timeline:view()){@media(min-width:1440px){.px{animation:par linear both;animation-timeline:view()}}}
 }
 .nlogo{display:block;width:100%;height:100%}
-.nlogo .cls-6{fill:#246BCE}
-.nlogo .cls-1{fill:#fff}
-.nlogo .cls-3{fill:#fff;font-family:'PT Sans',sans-serif;font-weight:700;font-size:110px}
-.nlogo .cls-2{fill:#fff;font-family:'PT Sans',sans-serif;font-weight:700;font-size:40px}
 .hdr{position:fixed;left:0;right:0;top:0;z-index:50;color:#fff;transition:transform .3s var(--e1),background-color .3s,color .3s}
 .hdr[data-s=solid]{background:#F6F3EF;color:#001D3A}
 .hdr-in{transition:min-height .3s var(--e1)}
